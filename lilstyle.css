@@ -269,6 +269,10 @@ ul{
 	color:#e6b249;	
 	font-size: 4em;
 }
+.Servicios,
+.fotos {
+    text-align: center;
+}
 .borders{
 border-block: 3px solid #e6b249;
   font-size: 3em;
