@@ -443,6 +443,7 @@ section, .header{
 
 .img {
   width: 100%;
+  height: auto; /* let aspect-ratio (not the img's width/height attributes) size the tile */
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
