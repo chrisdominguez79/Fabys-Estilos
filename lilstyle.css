@@ -1,4 +1,7 @@
-@import url(https://db.onlinewebfonts.com/c/167010b2782077992836168b48b8c057?family=Lovelace+Text);
+/* Lovelace Text is loaded via a <link> in index.html's <head> instead of
+   @import here — @import can only be discovered by the browser after this
+   whole stylesheet has downloaded and started parsing, adding an avoidable
+   round trip before the font even starts loading. */
 *{
 	box-sizing: border-box;
 	margin: 0;
@@ -75,12 +78,6 @@ section, .header{
 	font-weight: bold;
 	transition: color 0.2s ease;
 }
-
-.navbar .list{
-	display: flex;
-	justify-content: space-between;
-	align-items: end;}
-
 
 .navbar ul{
 	display: flex;
@@ -215,10 +212,6 @@ section, .header{
 }
 
 /* Show when menu is active */
-.header.show-socials .mobile-socials {
-  display: flex;
-}
-
 /* Hide everything on larger screens */
 @media (min-width: 768px) {
   .hamburger {
@@ -468,58 +461,6 @@ section, .header{
   .collage-wrapper {
     padding: 10px;
   }
-}
-
-
-.commentSection .row{
-	display: flex;
-	flex-wrap:wrap;
-	color:#e6b249;
-	gap: 20px;
-	padding: 50px 35px;
-	
-}
-
-.column_title{
-	display:flex;
-	align-items:center;
-	justify-content: center;
-	text-align: center;
-}
-.column_title em{
-	/*color:#e6b249; */
-	font-size: clamp(2em, 4vw, 4em);
-}
-
-.column_image {
-  display: flex;
-  align-items: center;     /* vertically center */
-  justify-content: center; /* optional: horizontally center too */
-}
-.column_image img{
-	
-    width: 100%;
-    height:auto;
-    max-width: 100%;
-    border-radius:8px;
-    
-}
-
-.column_comments p{
-	font-size: clamp(18px, 1.2vw, 20px);
-	/*color:#e6b249; */
-	margin-bottom: 10px;
-}
-.column_comments h5{
-	font-size:clamp(14px, 1.2vw, 18px);
-	color:#59493b;
-	margin-bottom: 20px;
-}
-
-.column {
-	flex: 1 1 300px;
-	min-width:250px;
-
 }
 
 
