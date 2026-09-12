@@ -1,248 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Castlerod Law Group PLLC</title>
-		<link rel="stylesheet" type="text/css" href="lawfirm.css">		
-		<link rel="icon" type="image/png" href="Castlerod.png?v=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Faby's Estilos | Salón de Belleza en Houston, TX</title>
+<meta name="description" content="Faby's Estilos - Salón de belleza en Houston, TX. Cabello, cejas, maquillaje, depilación y faciales. Agenda tu cita hoy.">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="lilstyle.css">
 </head>
 <body>
-	<div class="header">
-	<div class="hamburger"onclick="toggleMenu()">☰</div>	
-	<div class ="top-bar">   
-	    <div class="logo">
-        <img src="Castlerod.png" alt="Law Firm Logo">
-    </div>
-    
-		<nav class="navbar">
-			<ul class="nav">
-				<li>
-					<a href="#Home" onclick="toggleMenu(true)">Home</a>
-				</li>
-				
-				<li>
-					<a href="#Our Team" onclick="toggleMenu(true)">Our Team</a>
-				</li>
 
-				<li class="dropdown">
-    			<a href="#Criminal-Defense" class="dropbtn">     Criminal Defense ▾</a>
-
-    <ul class="dropdown-content">
-        <li><a href="#DUI">Driving While Intoxicated (DWI/DUI)</a></li>
-        <li><a href="#Drug Crimes">Drug Crimes</a></li>
-        <li><a href="#Violent Crimes">Violent Crimes</a></li>
-        <li><a href="#Weapons Offenses">Weapons Offenses</a></li>
-        <li><a href="#Juvenile Crimes">Juvenile Crimes</a></li>
-        <li><a href="#Federal Crimes">Federal Crimes</a></li>
-    </ul>
-</li>
-				<li>
-
-					<a href="tel:+12674365109" >(267)743-5109</a>
-				</li>
-				<li>
-					<a href="contactUs.html">Contacts Us</a>
-				</li>
-
-			</ul>
-			</nav>
+<div class="top-bar">
+	<div class="hamburger" id="hamburger">&#9776;</div>
+	<nav class="navbar">
+		<ul id="navList">
+			<li><a href="#inicio">Inicio</a></li>
+			<li><a href="#servicios">Servicios</a></li>
+			<li><a href="#galeria">Galería</a></li>
+			<li><a href="#contacto">Contacto</a></li>
+		</ul>
+		<div class="mobile-socials" id="mobileSocials">
+			<a href="https://www.tiktok.com/@fabys.estilo.oficial" target="_blank" rel="noopener" aria-label="TikTok de Faby's Estilos">
+				<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 5.82c-.9-.98-1.4-2.26-1.4-3.62h-3.05v13.9c0 1.66-1.34 3-3 3-.42 0-.82-.09-1.18-.24-.75-.32-1.35-.94-1.62-1.72-.13-.37-.2-.76-.2-1.16 0-1.75 1.42-3.17 3.17-3.17.32 0 .63.05.92.14V9.9a6.3 6.3 0 0 0-.92-.07c-3.4 0-6.15 2.75-6.15 6.15 0 2.08 1.03 3.92 2.6 5.03a6.1 6.1 0 0 0 3.55 1.12c3.4 0 6.15-2.75 6.15-6.15V8.7a9.3 9.3 0 0 0 5.43 1.74V7.4a6.3 6.3 0 0 1-4.3-1.58z"/></svg>
+			</a>
+			<a href="https://www.instagram.com/fabys.estilos?stkn=MWlhb2dvMjRkdzgwdQ==" target="_blank" rel="noopener" aria-label="Instagram de Faby's Estilos">
+				<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C5.83 0 5.56.01 4.7.048c-.85.04-1.43.174-1.94.372a3.92 3.92 0 0 0-1.42.923A3.93 3.93 0 0 0 .42 2.76c-.198.51-.333 1.092-.372 1.942C.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372.854.038 1.126.048 3.3.048s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.92 3.92 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942.038-.853.048-1.125.048-3.298s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.93 3.93 0 0 0-.923-1.417A3.91 3.91 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0H8zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.48 2.48 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
+			</a>
+		</div>
+	</nav>
+	<a href="#inicio"><img src="logo-navbar.png" alt="Faby's Estilos" class="logo"></a>
 </div>
-</div>
-<div class="Welcome">
 
-    <video autoplay muted loop playsinline class="background-video">
-        <source src="Video.mp4" type="video/mp4">
-    </video>
-    <div class="welcome-text">
-	<h3>Welcome To Castlerod Lawfirm, PLLC</h3>
-	<h1>Justice Served With Integrity, Precision, And Care</h1>
-	<h2>At our firm, we believe great service begins with genuine dedication. Every client receives personalized attention, clear communication, and strategic expertise tailored to their unique needs. We don’t just handle cases — we build trust, uphold values, and deliver results.</h2>
-	<button class ="contactUs" onclick="goToPage('contactUs.html')">Contacts Us</button>
-	<button class ="contactUs"<a href="tel:+12674365109">+1(267)743-5109</a></button>
-</div>
-</div>
-<div class="Title"> 
-                    <em>Our Practice Areas</em>
-</div>
-<div id="DUI" class="crime-section">
-    <img src="DUI.jpg" alt="DWI Defense">
-	<div class="crime-text">
-	<h1>Driving While Intoxicated (DWI/DUI)</h1>
-	<h2>This refers to being accused of driving a vehicle while under the influence of alcohol or drugs. It can range from a first‑time ticket to more serious charges if someone was hurt.</h2>
+<header class="header" id="inicio">
+	<div class="container">
+		<h1>Faby's Estilos</h1>
+		<p>Salón de Belleza en Houston, TX</p>
+		<a class="whatsapp-button" href="https://wa.me/18322917620" target="_blank" rel="noopener">Reservar Cita</a>
 	</div>
+</header>
+
+<main>
+
+<section class="Servicios" id="servicios">
+	<div class="container">
+		<h2>Nuestros <em>Servicios</em></h2>
+
+		<div class="ServiciosTitle">
+			<div>
+				<img src="VIP Estilo Peinados Houston.png" alt="Servicio de cabello en Faby's Estilos">
+				<h3>Cabello</h3>
+			</div>
+			<div>
+				<img src="VIP Estilo Cejas Houston.png" alt="Servicio de cejas en Faby's Estilos">
+				<h3>Cejas</h3>
+			</div>
+			<div>
+				<img src="VIP Estilo Maquillaje Houston.png" alt="Servicio de maquillaje en Faby's Estilos">
+				<h3>Maquillaje</h3>
+			</div>
+			<div>
+				<img src="depilacion.png" alt="Servicio de depilación en Faby's Estilos">
+				<h3>Depilación</h3>
+			</div>
+			<div>
+				<img src="facial.png" alt="Servicio facial en Faby's Estilos">
+				<h3>Faciales</h3>
+			</div>
+			<div>
+				<img src="VIP Estilo Barberia Houston.png" alt="Servicio de barbería en Faby's Estilos">
+				<h3>Barbería</h3>
+			</div>
+		</div>
 	</div>
-	
-	<div id="Drug Crimes" class="crime-section">
-    <img src="Drugs.jpg" alt="DWI Defense">
-	<div class="crime-text">
-	<h1>Drug Crimes</h1>
-	<h2>Covers offenses related to controlled substances, such as possession, distribution, manufacturing, trafficking, and even drug paraphernalia. These can be charged as misdemeanors or serious felonies depending on amount and intent.</h2>
-	</div>
-	</div>
-	
-	<div  id="Violent Crimes" class="crime-section">
-    <img src="Asault.jpg" alt="DWI Defense">
-	<div class="crime-text">
-	<h1>Violent Crimes</h1>
-	<h2>These are crimes where someone is accused of hurting or threatening to hurt another person. Examples include assaults, fights, domestic violence, or more serious charges like manslaughter or murder.</h2>
-	</div>
-	</div>
-	
-	<div  id="Weapons Offenses" class="crime-section">
-    <img src="Weapons.jpg" alt="DWI Defense">
-	<div class="crime-text">
-	<h1>Weapons Offenses</h1>
-	<h2>If someone is accused of illegally carrying, using, or owning a weapon (like a gun or knife), this falls under weapons crimes.</h2>
-	</div>
-	</div>
-	
-	<div  id="Juvenile Crimes" class="crime-section">
-    <img src="Juvenile.jpg" alt="DWI Defense">
-	<div class="crime-text">
-	<h1>Juvenile Crimes</h1>
-	<h2>These are offenses committed by people under 18. The legal process is different from adult court and focuses more on rehabilitation.</h2>
-	</div>
-	</div>
-	
-	<div  id="Federal Crimes" class="crime-section">
-    <img src="Federal.jpg" alt="DWI Defense">
-	<div class="crime-text">
-	<h1>Federal Crimes</h1>
-	<h2>Some crimes are charged under federal law (instead of just state law), like large‑scale drug trafficking, federal fraud, or offenses involving federal agencies. These usually come with harsher penalties.</h2>
-	</div>
-	</div>
-	
-	<section id="Our Team">
-	<div class="Title"> 
-                    <em>Our Team</em>
-	</div>
-	
-		<div class="crime-section">
-    <img src="Subject1.jpg" alt="DWI Defense">
-	<div class="crime-text">
-	<h1>John Smith</h1>
-	<h2>Attorney John Smith is a dedicated legal advocate committed to protecting the rights and interests of every client he represents. Known for his integrity, strategic approach, and unwavering commitment to justice, John Smith provides personalized legal solutions tailored to each client's unique circumstances. He believes that every client deserves clear communication, honest guidance, and strong representation from start to finish. Whether handling complex legal matters or providing trusted counsel, Attorney Smith strives to deliver results with professionalism, compassion, and determination—earning the confidence of those who place their trust in him.</h2>
-	</div>
-	</div>
-	</section>
-			<div class="crime-section">
-    <img src="Subject2.jpg" alt="DWI Defense">
-	<div class="crime-text">
-	<h1>Harold Smith</h1>
-	<h2>Attorney Harold Smith is a respected legal professional dedicated to delivering dependable representation with integrity, precision, and compassion. With a client-first approach, Harold takes the time to understand each individual's goals and challenges, providing practical legal guidance and strong advocacy every step of the way. His commitment to professionalism, attention to detail, and pursuit of favorable outcomes have earned him the trust of clients seeking reliable legal counsel. Whether negotiating settlements or representing clients in court, Attorney Harold Smith is committed to protecting their rights and achieving results with confidence and care.</h2>
-	</div>
-	</div>
-
-<section id="parentFooter">
-
-    <div class="footer">
-
-        <div class="footer-logo">
-            <img src="Castlerod.png" alt="Castlerod Law Group Logo">
-        </div>
-
-        <div class="footer-container">
-
-            <div class="row">
-
-                <div class="column column_VISIT_TITLE">
-
-                    <i style="font-size:24px" class="fa">&#xf095;</i>
-
-                    <p>
-                        <a href="tel:+12674365109">
-                            +1 (267) 743-5109
-                        </a>
-                    </p>
-
-                    <p>
-                        Houston, TX
-                    </p>
-
-                </div>
-
-
-				
-               <!-- SUBJECTED OUT FOR FUTURE OFFICE SPACE
-               
-                 <div class="column column_maps">
-                    <iframe 
-                        src=""
-                        width="100%" 
-                        height="200" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                -->
-                
-            </div>
-
-         
-            <div class="footer-bottom">
-
-                <p>
-                    © 2026 Castlerod Law Group PLLC. All Rights Reserved.
-                </p>
-
-                <p class="developer-credit">
-                    Website created by Christian Dominguez.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
 </section>
-		
-	<script>
-	function goToPage(page) {
-	    window.location.href = page;
-	}
-  // Scroll to top on load or reload, including when coming from bfcache
-  function scrollToTop() {
-    // Use a second delay to override browser restoration
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-      if (window.location.hash) {
-        history.replaceState(null, null, ' ');
-      }
-    }, 50); // Delay slightly longer to override stubborn Safari behavior
-  }
 
-  window.addEventListener('load', scrollToTop);
-  window.addEventListener('pageshow', function (event) {
-    if (!event.persisted) {
-      scrollToTop();
-    }
-  });
-	
-		
- 		 function toggleMenu(forceClose = false) 
- 	{
- 		    const navbar = document.querySelector('.navbar');
- 		    const hamburger = document.querySelector('.hamburger');
- 		   const body = document.body;
-		const isActive = navbar.classList.contains('active');
-		
-		    if (isActive || forceClose) {
-		      // Menu is open — now closing it
-		      navbar.classList.remove('active');
-		      hamburger.classList.remove('active');
-		      body.classList.remove('no-scroll'); // ✅ Re-enable scroll
-		    } else {
-		      // Menu is closed — now opening it
-		      navbar.classList.add('active');
-		      hamburger.classList.add('active');
-		      body.classList.add('no-scroll'); // 🚫 Disable scroll
-		    }
-		  }
-	</script>
+<section class="fotos" id="galeria">
+	<div class="container">
+		<h2>Nuestro <em>Trabajo</em></h2>
+
+		<div class="collage-wrapper">
+			<div class="collage">
+				<img class="img" src="V.I.P Estilo Peinados Houston by Fabiola.jpg" alt="Peinado hecho por Fabiola en Faby's Estilos">
+				<img class="img" src="V.I.P Estilo cejas by Fabiola.jpg" alt="Cejas hechas por Fabiola en Faby's Estilos">
+				<img class="img" src="V.I.P Estilo brows by Fabiola.JPG" alt="Cejas (brows) hechas por Fabiola en Faby's Estilos">
+				<img class="img" src="V.I.P Estilo get your eyebrows done with Fabiola.jpg" alt="Cejas perfectas con Fabiola en Faby's Estilos">
+				<img class="img" src="V.I.P Estilo rizos hecho por Fabiola.jpg" alt="Rizos hechos por Fabiola en Faby's Estilos">
+				<img class="img" src="pestanas.jpg" alt="Pestañas en Faby's Estilos">
+				<img class="img" src="IMG_2806.jpg" alt="Trabajo de belleza en Faby's Estilos">
+				<img class="img" src="V.I.P Estilo Salon de Belleza Houston by Fabiola.jpg" alt="Cliente en Faby's Estilos, trabajo por Fabiola">
+				<img class="img" src="V.I.P Estilo Salon de Belleza Houston by Valeria.JPG" alt="Cliente en Faby's Estilos, trabajo por Valeria">
+			</div>
+		</div>
+	</div>
+</section>
+
+</main>
+
+<footer class="footer" id="contacto">
+	<div class="row">
+		<div class="column_VISIT_TITLE">
+			<h2><em>Visítanos</em></h2>
+			<p>📍 607 E Richey Rd, Houston, TX 77073</p>
+			<p>📞 <a href="tel:+18322917620">(832) 291-7620</a></p>
+			<a class="whatsapp-button" href="https://www.google.com/maps/dir/?api=1&destination=607+E+Richey+Rd,+Houston,+TX+77073" target="_blank" rel="noopener">🗺️ Cómo llegar</a>
+		</div>
+		<div class="column_maps">
+			<iframe
+				title="Ubicación de Faby's Estilos en el mapa"
+				src="https://www.google.com/maps?q=607+E+Richey+Rd,+Houston,+TX+77073&output=embed"
+				width="100%"
+				height="350"
+				style="border:0;"
+				allowfullscreen=""
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade">
+			</iframe>
+		</div>
+	</div>
+</footer>
+
+<script>
+	// Keep the layout's top offset (body padding, section scroll-margin) in
+	// exact sync with the real, rendered height of the fixed navbar — the
+	// navbar's height changes with the logo size, font loading, and viewport
+	// width, so a hardcoded pixel value drifts out of sync and either leaves
+	// a gap or lets the navbar overlap content.
+	const topBar = document.querySelector('.top-bar');
+	function syncNavbarHeight(){
+		const h = Math.round(topBar.getBoundingClientRect().height);
+		document.documentElement.style.setProperty('--navbar-h', h + 'px');
+	}
+	syncNavbarHeight();
+	window.addEventListener('load', syncNavbarHeight);
+	window.addEventListener('resize', syncNavbarHeight);
+	const navLogo = document.querySelector('.top-bar .logo');
+	if (navLogo && !navLogo.complete) {
+		navLogo.addEventListener('load', syncNavbarHeight);
+	}
+	if (document.fonts && document.fonts.ready) {
+		document.fonts.ready.then(syncNavbarHeight);
+	}
+
+	const hamburger = document.getElementById('hamburger');
+	const navbar = document.querySelector('.navbar');
+	const mobileSocials = document.getElementById('mobileSocials');
+
+	hamburger.addEventListener('click', () => {
+		navbar.classList.toggle('active');
+		hamburger.classList.toggle('active');
+		mobileSocials.classList.toggle('active');
+		document.body.classList.toggle('no-scroll');
+	});
+
+	document.querySelectorAll('.navbar ul a').forEach(link => {
+		link.addEventListener('click', () => {
+			navbar.classList.remove('active');
+			hamburger.classList.remove('active');
+			mobileSocials.classList.remove('active');
+			document.body.classList.remove('no-scroll');
+		});
+	});
+</script>
+
 </body>
 </html>

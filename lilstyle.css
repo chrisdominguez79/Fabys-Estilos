@@ -42,15 +42,28 @@ ul{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 40px;
-  position: absolute;
+  padding: 6px 40px;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1000;
+  background: #000;
+  border-bottom: 3px solid #e6b249;
+}
+
+/* --navbar-h is measured and kept in sync with the real, rendered navbar
+   height by a small script in index.html (fonts/images can change its
+   actual size). The px fallback only matters for the instant before that
+   script runs. */
+body{
+	padding-top: var(--navbar-h, 80px);
+}
+
+section, .header{
+	scroll-margin-top: var(--navbar-h, 80px);
 }
 
 .navbar{
-	/*background: #3474e6;*/
 	color: #fff;
 }
 
@@ -60,7 +73,9 @@ ul{
 	text-decoration: none;
 	font-size: 18px;
 	font-weight: bold;
+	transition: color 0.2s ease;
 }
+
 .navbar .list{
 	display: flex;
 	justify-content: space-between;
@@ -80,11 +95,13 @@ ul{
 .hamburger {
   display: none;
   font-size: 30px;
+  line-height: 1;
   cursor: pointer;
   color: white;
-    position: absolute;
-  top: 15px;
+  position: absolute;
+  top: 50%;
   right: 20px;
+  transform: translateY(-50%);
   z-index: 1100;
 }
 
@@ -95,13 +112,14 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* spacing between hamburger and logo */
-    padding: 10px 20px 0; /* reduce bottom padding */
+    padding: 8px 20px;
     margin-bottom: 0; /* remove extra spacing below */
   }
 
   .logo {
     margin-bottom: 0; /* tighten space below logo */
+    height: 66px;
+    width: auto;
   }
 
   .header {
@@ -150,8 +168,9 @@ ul{
   .hamburger {
     display: block;
     position: absolute;
-    top: 15px;
+    top: 50%;
     right: 20px;
+    transform: translateY(-50%);
     font-size: 30px;
     color: white;
     transition: color 0.3s ease;
@@ -180,17 +199,19 @@ ul{
 .mobile-socials a {
   color: white;
   font-size: 1.8rem;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-flex;
 }
 
-.mobile-socials a:hover {
-  color: #e6b249;
+.mobile-socials svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: currentColor;
+  display: block;
 }
+
 .mobile-socials a:nth-of-type(2) {
  margin-left: 5px;
-}
-.mobile-socials a:nth-of-type(2):hover {
-  color: #e6b249;
 }
 
 /* Show when menu is active */
@@ -220,7 +241,7 @@ ul{
 	color:#e6b249;
 	height: 720px;
 	min-height: 400px;
- 	background-image: url("logo.jpg");
+ 	background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("V.I.P_Estilos.jpg");
  	background-position : center;
  	background-repeat: no-repeat;
  	background-size: cover;
@@ -235,58 +256,82 @@ ul{
 }
 
 .logo{
-	top:0px;
-	left: 20px;
-	width: 250px; /* adjust as needed */
-	height: auto;
+	object-fit: contain;
+	display: block;
+}
+
+@media (min-width: 769px){
+	.logo{
+		height: 80px; /* fits the navbar; width follows the logo's own aspect ratio */
+		width: auto;
+	}
 }
 
 
 .ServiciosTitle img{
   width: 100%;
-  height: 374px;
-  object-fit: cover;
-  max-width: 390px;
-  border-radius: 10px;
+  height: auto;
+  object-fit: contain;
+  max-width: 300px;
 }
 .ServiciosTitle{
 	display:flex;
 	flex-wrap:wrap;
   justify-content: center; /* centers items horizontally */
-  gap: 30px; /* space between items */
+  gap: 40px; /* space between items */
   max-width: 1300px;
   margin: 0 auto;
   padding: 20px;
 
 }
 .ServiciosTitle > div {
-  flex: 0 1 calc(33.33% - 30px); /* three items per row with gap compensation */
+  flex: 0 1 calc(33.33% - 40px); /* three items per row with gap compensation */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.ServiciosTitle h3{
+	margin-top: 10px;
+	padding-bottom: 10px;
+	font-size: 1.4em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #333;
+	border-bottom: 3px solid #e6b249;
+}
+.Servicios{
+	padding: 60px 0;
+}
+.Servicios h2{
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	font-size: clamp(1.5rem, 6vw, 2.5rem);
+	white-space: nowrap;
+	padding-bottom: 18px;
+	margin-bottom: 30px;
+}
+.Servicios h2::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #e6b249;
+}
 .Servicios em{
-	color:#e6b249;	
-	font-size: 4em;
+	color:#e6b249;
+	font-style: normal;
 }
 .Servicios,
 .fotos {
     text-align: center;
 }
-.borders{
-border-block: 3px solid #e6b249;
-  font-size: 3em;
-  text-align: center;
-  margin-top: 10px 0;
-}
 
 @media (max-width: 768px) {
   .ServiciosTitle > div {
     flex: 0 1 100%;
-  }
-
-  .borders {
-    font-size: 2em;
   }
 }
 .whatsapp-button {
@@ -304,64 +349,119 @@ border-block: 3px solid #e6b249;
   justify-content: center;        /* horizontal center */
   text-decoration: none;
   margin: 10px 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  transition: color 0.35s ease, background-color 0.35s ease,
+              transform 0.3s ease, box-shadow 0.35s ease;
+}
+
+.whatsapp-button::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.65), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.whatsapp-button:active{
+  background-color: #e6b249;
+  color: #1a1a1a;
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 6px 18px rgba(230,178,73,0.5);
 }
 
 .header h1{
-	font-size: 3em;
+	font-size: clamp(2.2rem, 5vw + 1.2rem, 4rem);
 	font-weight: bold;
 	line-height: 1.2;
+	color: #fff;
+	letter-spacing: 3px;
+	text-shadow: 0 4px 26px rgba(0,0,0,0.65), 0 2px 8px rgba(0,0,0,0.6);
+	animation: heroPopIn 0.9s ease both;
 }
 
+.header p{
+	font-size: clamp(1rem, 1.2vw + 0.8rem, 1.4rem);
+	margin-bottom: 22px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #f2dcae;
+	text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+	animation: heroPopIn 0.9s ease 0.15s both;
+}
+
+.header .whatsapp-button{
+	animation: heroPopIn 0.9s ease 0.3s both;
+}
+
+@keyframes heroPopIn{
+	from{
+		opacity: 0;
+		transform: translateY(22px) scale(0.97);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+.fotos{
+	padding: 60px 0;
+	background: #faf8f5;
+}
+.fotos h2{
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	font-size: clamp(1.6rem, 7vw, 2.5rem);
+	white-space: nowrap;
+	padding-bottom: 18px;
+	margin-bottom: 30px;
+}
+.fotos h2::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #e6b249;
+}
 .fotos em{
 	color: #e6b249;
-	font-size:4em;
+	font-style: normal;
 }
 
 .collage-wrapper {
   max-width: 1200px;   /* or whatever fits your layout best */
   margin: 0 auto;
   padding: 20px;
-    
+
 }
 
 .collage {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    "img1  img3 img2"
-    "img4 img5  img2"
-    "img6 img7  img8";
-    gap: 10px;
-  grid-auto-rows: 250px; 
+  grid-template-columns: repeat(3, 1fr); /* 3 columns, 3 rows */
+  gap: 12px;
 }
-
-.img1 { grid-area: img1; }
-.img2 { grid-area: img2; }
-.img3 { grid-area: img3; }
-.img4 { grid-area: img4; }
-.img5 { grid-area: img5; }
-.img6 { grid-area: img6; }
-.img7 { grid-area: img7; }
-.img8 { grid-area: img8; }
-
 
 .img {
   width: 100%;
-  height:100%;
-aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
   border-radius: 6px;
+  transition: transform 0.3s ease;
 }
+
 @media (max-width: 768px) {
   .collage {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on phones */
-    grid-template-areas:
-      "img1 img2"	
-      "img3 img3"
-      "img4 img5"
-      "img6 img7"
-      "img8 img8";
     gap: 8px; /* slightly smaller gap for phones */
   }
 
@@ -423,13 +523,19 @@ aspect-ratio: 1 / 1;
 }
 
 
+.footer{
+	background: #000;
+	color: #fff;
+}
+
 .footer .row{
 	display: flex;
 	flex-wrap:wrap;
 	color:#e6b249;
 	gap: 20px;
 	padding: 50px 35px;
-	
+	max-width: 1300px;
+	margin: 0 auto;
 }
 
 .column_VISIT_TITLE{
@@ -438,17 +544,23 @@ aspect-ratio: 1 / 1;
 	align-items:center;
 	justify-content: center;
 	text-align: center;
-	  max-width: 500px;
-	
+	max-width: 500px;
+	flex: 1 1 300px;
+	gap: 8px;
 }
 .column_VISIT_TITLE em{
-	font-size: clamp(2em, 4vw, 4em);
+	font-size: clamp(2em, 4vw, 3em);
+	font-style: normal;
 }
 .column_VISIT_TITLE p{
-	
-	font-size: clamp(18px, 1.2vw, 20px);
-	color:#59493b;
+
+	font-size: clamp(16px, 1.2vw, 20px);
+	color:#fff;
 	margin-bottom: 10px;
+}
+.column_VISIT_TITLE a{
+	color:#e6b249;
+	text-decoration: none;
 }
 .column_maps{
 	  display: flex;
@@ -459,8 +571,44 @@ aspect-ratio: 1 / 1;
     max-width: 100%;
     border-radius:8px;
       flex: 2 1 500px; /* grow more than the title column */
-    
-    
+
+}
+.column_maps iframe{
+	border-radius: 8px;
+}
+
+/* Hover effects only for devices that actually support hovering (mouse/trackpad).
+   On touch devices, :hover would otherwise "stick" after a tap until the user
+   taps elsewhere; :active (used above/below) already gives correct tap feedback
+   that releases as soon as the finger lifts. */
+@media (hover: hover) and (pointer: fine){
+	.navbar a:hover{
+		color: #e6b249;
+	}
+
+	.mobile-socials a:hover{
+		color: #e6b249;
+		transform: translateY(-2px);
+	}
+
+	.whatsapp-button:hover{
+		background-color: #e6b249;
+		color: #1a1a1a;
+		transform: translateY(-3px) scale(1.04);
+		box-shadow: 0 10px 24px rgba(230,178,73,0.5);
+	}
+
+	.whatsapp-button:hover::before{
+		left: 125%;
+	}
+
+	.img:hover{
+		transform: scale(1.03);
+	}
+
+	.column_VISIT_TITLE p a:hover{
+		text-decoration: underline;
+	}
 }
 
 
