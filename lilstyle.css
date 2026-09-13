@@ -1,7 +1,17 @@
-/* Lovelace Text is loaded via a <link> in index.html's <head> instead of
-   @import here — @import can only be discovered by the browser after this
-   whole stylesheet has downloaded and started parsing, adding an avoidable
-   round trip before the font even starts loading. */
+/* Font made from onlinewebfonts.com, licensed CC BY 4.0 — see
+   https://www.onlinewebfonts.com/fonts
+   Self-hosted (fonts/lovelace-text.woff2/.woff) instead of linking their CDN:
+   avoids an extra DNS lookup + connection to a third-party origin, and lets
+   us list woff2 first so browsers that support it (nearly all of them) use
+   the ~32% smaller file instead of the plain woff their own CSS serves first. */
+@font-face{
+	font-family: "Lovelace Text";
+	src: url("fonts/lovelace-text.woff2") format("woff2"),
+	     url("fonts/lovelace-text.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
 *{
 	box-sizing: border-box;
 	margin: 0;
@@ -15,7 +25,7 @@ html {
 }
 body {
 
-	font-family: "Lovelace Text";
+	font-family: "Lovelace Text", Georgia, "Times New Roman", serif;
 	line-height: 1.5;
 	color: #333;
 	background: #fff;
@@ -62,7 +72,7 @@ body{
 	padding-top: var(--navbar-h, 80px);
 }
 
-section, .header{
+section, .header, footer{
 	scroll-margin-top: var(--navbar-h, 80px);
 }
 
